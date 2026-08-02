@@ -1,0 +1,43 @@
+export const lessonRoots = [
+  {
+    char: '日',
+    pinyin: 'rì',
+    meaning: 'sun · day',
+    picture: 'sun',
+    title: 'Why 日 looks like this',
+    explanation: 'It began as the outline of the sun. A mark inside helped identify the shape as the sun, rather than an empty ring. Straight cuts were easier to carve on bone, so the round picture became more angular.',
+    hook: 'See a sun with one bright mark inside.',
+  },
+  {
+    char: '月',
+    pinyin: 'yuè',
+    meaning: 'moon · month',
+    picture: 'moon',
+    title: 'Why 月 looks like this',
+    explanation: 'It began as the curved edge of a crescent moon, with a short mark suggesting the darker part inside. As writing became faster, the curve was straightened and fitted into a regular writing box.',
+    hook: 'See a slim crescent standing on its side.',
+  },
+];
+
+export const commonPictureRoots = [
+  { char: '日', pinyin: 'rì', meaning: 'sun', icon: '☀', examples: '明 · 晴 · 时' },
+  { char: '月', pinyin: 'yuè', meaning: 'moon', icon: '☾', examples: '明 · 期 · 朝' },
+  { char: '水', pinyin: 'shuǐ', meaning: 'water', icon: '≈', examples: '河 · 海 · 洗', note: 'Often becomes 氵.' },
+  { char: '火', pinyin: 'huǒ', meaning: 'fire', icon: '♨', examples: '灯 · 热 · 照', note: 'Can become 灬 below a character.' },
+  { char: '木', pinyin: 'mù', meaning: 'tree', icon: '♧', examples: '林 · 森 · 树' },
+  { char: '山', pinyin: 'shān', meaning: 'mountain', icon: '▲', examples: '岩 · 峰 · 岛' },
+  { char: '人', pinyin: 'rén', meaning: 'person', icon: '人', examples: '你 · 休 · 住', note: 'Often becomes 亻.' },
+  { char: '口', pinyin: 'kǒu', meaning: 'mouth', icon: '□', examples: '吃 · 喝 · 唱' },
+  { char: '目', pinyin: 'mù', meaning: 'eye', icon: '◉', examples: '看 · 眼 · 睛' },
+  { char: '手', pinyin: 'shǒu', meaning: 'hand', icon: '✋', examples: '打 · 提 · 找', note: 'Often becomes 扌.' },
+  { char: '心', pinyin: 'xīn', meaning: 'heart', icon: '♥', examples: '想 · 情 · 怕', note: 'Often becomes 忄.' },
+  { char: '女', pinyin: 'nǚ', meaning: 'woman', icon: '女', examples: '妈 · 姐 · 好' },
+  { char: '子', pinyin: 'zǐ', meaning: 'child', icon: '子', examples: '字 · 孩 · 孙' },
+  { char: '田', pinyin: 'tián', meaning: 'field', icon: '▦', examples: '男 · 界 · 留' },
+  { char: '雨', pinyin: 'yǔ', meaning: 'rain', icon: '☂', examples: '雪 · 雷 · 霜' },
+  { char: '牛', pinyin: 'niú', meaning: 'ox', icon: '牛', examples: '物 · 特 · 牧', note: 'Often becomes 牜.' },
+  { char: '羊', pinyin: 'yáng', meaning: 'sheep', icon: '羊', examples: '美 · 群 · 善' },
+  { char: '鸟', pinyin: 'niǎo', meaning: 'bird', icon: '♩', examples: '鸣 · 鸡 · 鸭' },
+  { char: '鱼', pinyin: 'yú', meaning: 'fish', icon: '><>', examples: '鲜 · 鲸 · 鲤' },
+  { char: '门', pinyin: 'mén', meaning: 'door', icon: 'Π', examples: '问 · 间 · 闻' },
+];

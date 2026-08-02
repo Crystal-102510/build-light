@@ -31,6 +31,9 @@ const { chromium } = require('playwright');
 
   await page.goto(targetUrl, { waitUntil: 'networkidle' });
   await page.getByRole('button', { name: /Start lesson/ }).click();
+  await page.getByText('Why 日 looks like this').waitFor();
+  await page.getByText('Why 月 looks like this').waitFor();
+  await page.getByText('Why the clerical step matters').waitFor();
   await page.getByRole('button', { name: /I've got it/ }).click();
 
   await page.locator('.piece.red').click();
@@ -57,6 +60,10 @@ const { chromium } = require('playwright');
   await page.getByRole('button', { name: 'Tomorrow' }).click();
   await page.getByRole('button', { name: /Finish lesson/ }).click();
   await page.getByText('LESSON COMPLETE').waitFor();
+  await page.getByText('20 picture-roots to explore').waitFor();
+  await page.locator('.root-library summary').click();
+  const rootCount = await page.locator('.root-chip').count();
+  if (rootCount !== 20) throw new Error(`Expected 20 picture-roots, found ${rootCount}.`);
 
   const artifactDirectory = path.join(__dirname, '..', 'artifacts');
   fs.mkdirSync(artifactDirectory, { recursive: true });
