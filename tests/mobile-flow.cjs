@@ -23,6 +23,11 @@ const { chromium } = require('playwright');
   page.on('requestfailed', (request) => {
     errors.push(`request: ${request.url()} — ${request.failure()?.errorText || 'failed'}`);
   });
+  page.on('response', (response) => {
+    if (response.status() >= 400) {
+      errors.push(`response: ${response.status()} ${response.url()}`);
+    }
+  });
 
   await page.goto(targetUrl, { waitUntil: 'networkidle' });
   await page.getByRole('button', { name: /Start lesson/ }).click();
