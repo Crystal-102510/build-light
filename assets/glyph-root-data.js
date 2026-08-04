@@ -19,6 +19,147 @@ export const lessonRoots = [
   },
 ];
 
+export const rootChapters = [
+  {
+    id: 'water',
+    char: '水',
+    pinyin: 'shuǐ',
+    meaning: 'water',
+    headline: 'How water became 水',
+    lessonStep: 1,
+    lessonSteps: 8,
+    stages: [
+      {
+        id: 'picture',
+        label: 'PICTURE',
+        visual: 'water-picture',
+        color: 'blue',
+        accessibleLabel: 'A teaching picture of flowing water',
+      },
+      {
+        id: 'seal',
+        label: 'SEAL SCRIPT',
+        visual: 'water-seal',
+        color: 'coral',
+        accessibleLabel: 'The small-seal-script form of water',
+      },
+      {
+        id: 'today',
+        label: 'TODAY',
+        visual: 'modern-character',
+        color: 'ink',
+        accessibleLabel: 'The modern character 水',
+      },
+    ],
+    note: 'The flowing lines became a regular written form, while the idea of moving water stayed visible.',
+    primaryAction: 'Continue',
+    nextStep: 'Next: see how 水 changes inside another character.',
+    family: [
+      {
+        char: '河',
+        pinyin: 'hé',
+        meaning: 'river',
+        chunks: [
+          { text: '河流', pinyin: 'héliú', meaning: 'river' },
+          { text: '黄河', pinyin: 'Huáng Hé', meaning: 'Yellow River' },
+        ],
+      },
+      {
+        char: '海',
+        pinyin: 'hǎi',
+        meaning: 'sea',
+        chunks: [
+          { text: '大海', pinyin: 'dàhǎi', meaning: 'the sea' },
+          { text: '海边', pinyin: 'hǎibiān', meaning: 'seaside' },
+        ],
+      },
+      {
+        char: '洗',
+        pinyin: 'xǐ',
+        meaning: 'wash',
+        chunks: [
+          { text: '洗手', pinyin: 'xǐshǒu', meaning: 'wash hands' },
+          { text: '洗衣服', pinyin: 'xǐ yīfu', meaning: 'wash clothes' },
+        ],
+      },
+      {
+        char: '池',
+        pinyin: 'chí',
+        meaning: 'pond',
+        chunks: [
+          { text: '水池', pinyin: 'shuǐchí', meaning: 'pool' },
+          { text: '池塘', pinyin: 'chítáng', meaning: 'pond' },
+        ],
+      },
+      {
+        char: '泳',
+        pinyin: 'yǒng',
+        meaning: 'swim',
+        chunks: [
+          { text: '游泳', pinyin: 'yóuyǒng', meaning: 'to swim' },
+          { text: '泳池', pinyin: 'yǒngchí', meaning: 'swimming pool' },
+        ],
+      },
+    ],
+    radicalQuestion: {
+      prompt: 'Which shape does 水 use on the left side of a character?',
+      options: ['氵', '冫', '灬'],
+      answer: '氵',
+      explanation: '水 becomes the compact form 氵 when it appears on the left.',
+    },
+    meaningQuestions: [
+      { prompt: 'Which character means “river”?', answer: '河', options: ['河', '海', '洗'] },
+      { prompt: 'Which character means “sea”?', answer: '海', options: ['池', '海', '泳'] },
+      { prompt: 'Which character means “wash”?', answer: '洗', options: ['河', '洗', '池'] },
+      { prompt: 'Which character means “pond”?', answer: '池', options: ['海', '泳', '池'] },
+      { prompt: 'Which character means “swim”?', answer: '泳', options: ['洗', '河', '泳'] },
+    ],
+    wordQuestions: [
+      { prompt: 'Choose “wash hands”.', answer: '洗手', options: ['洗手', '海边', '泳池'] },
+      { prompt: 'Choose “seaside”.', answer: '海边', options: ['池塘', '黄河', '海边'] },
+      { prompt: 'Choose “swimming pool”.', answer: '泳池', options: ['河流', '泳池', '大海'] },
+      { prompt: 'Choose “Yellow River”.', answer: '黄河', options: ['水池', '黄河', '洗衣服'] },
+      { prompt: 'Choose “pond”.', answer: '池塘', options: ['池塘', '游泳', '河流'] },
+    ],
+    sentenceQuestions: [
+      {
+        sentence: '我每天游泳。',
+        pinyin: 'Wǒ měitiān yóuyǒng.',
+        answer: 'I swim every day.',
+        options: ['I swim every day.', 'I wash my hands every day.', 'I walk by the sea.'],
+      },
+      {
+        sentence: '请洗手。',
+        pinyin: 'Qǐng xǐshǒu.',
+        answer: 'Please wash your hands.',
+        options: ['Please wash your hands.', 'Please go to the river.', 'Please look at the pond.'],
+      },
+      {
+        sentence: '鱼在池塘里。',
+        pinyin: 'Yú zài chítáng lǐ.',
+        answer: 'The fish are in the pond.',
+        options: ['The fish are in the pond.', 'The fish are in the sea.', 'There is no water here.'],
+      },
+    ],
+    buildQuestions: [
+      {
+        prompt: 'Build: “I swim every day.”',
+        tokens: ['游泳', '我', '每天'],
+        answer: ['我', '每天', '游泳'],
+      },
+      {
+        prompt: 'Build: “Please wash your hands.”',
+        tokens: ['洗手', '请'],
+        answer: ['请', '洗手'],
+      },
+    ],
+    source: {
+      label: 'Dictionary of Chinese Character Variants — 水',
+      url: 'https://dict.variants.moe.edu.tw/dictView.jsp?ID=23284&la=1&q=1',
+    },
+  },
+];
+
 export const commonPictureRoots = [
   { char: '日', pinyin: 'rì', meaning: 'sun', icon: '☀', examples: '明 · 晴 · 时' },
   { char: '月', pinyin: 'yuè', meaning: 'moon', icon: '☾', examples: '明 · 期 · 朝' },
